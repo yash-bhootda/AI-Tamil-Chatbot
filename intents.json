@@ -1,0 +1,113 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hey",
+          "How are you",
+          "Is anyone there?",
+          "Hello",
+          "Good day"
+        ],
+        "responses": [
+          "Hey :-)",
+          "Hello, thanks for visiting",
+          "Hi there, what can I do for you?",
+          "Hi there, how can I help?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": [
+          "See you later, thanks for visiting",
+          "Have a nice day",
+          "Bye! Come back again soon."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      },
+      {
+        "tag": "working",
+        "patterns": [
+          "Which does this website do?",
+          "What is the purpose of this site?",
+          "What do you sell?","What does this site offer"
+        ],
+        "responses": [
+          "We are a platform which boosts brand presence , harnesses the power of customer collaboration and recommend products by providing a community to connect both leads and experts/influencers."
+          
+        ]
+      }, 
+      {
+        "tag": "concern",
+        "patterns": [
+          "How did you reach me ?",
+          "How did you know that i was interested in insurance?",
+          "Why am I here?"
+          
+        ],
+        "responses": [
+          "We used our analytics engine to reach out to via social media or personal email",
+          "We used our analytics engine to find your review on a particular social media and reached out to you via dm "
+          
+          
+        ]
+      },
+      {
+        "tag": "payments",
+        "patterns": [
+          "Can I buy health insurance here?",
+          "Can I buy insurance here?",
+          "Can I buy life insurance here?"
+        ],
+        "responses": [
+          "No , our website will provide you links which lead to the appropriate website via which you can buy insurance"
+          
+        ]
+      },
+      {
+        "tag": "influencer",
+        "patterns": [
+          "Why should i sign up as an influencer or expert?",
+          "Tell me about your influencer program?",
+          "Why should I become an influencer or expert"
+        ],
+        "responses": [
+          "By becoming an influencer stand a chance to win exciting prizes , amazon gift codes and bajaj finserv goodies.",
+          "Our influencer program gives you a chance to win exciting prizes , amazon gift codes and bajaj finserv goodies"
+        ]
+      },
+      {
+        "tag": "leads",
+        "patterns": [
+          "How are you different from other insurance websites?",
+          "Why should i buy insurance via your website",
+          "Why should i buy insurance via this website", "What is so unique about the prices here ?" ,"How are you different from others"
+        ],
+        "responses": [
+          "We can promise to offer the best prices on all Bajaj Finserv products via our website across the internet ",
+          "We offer the best prices on all Bajaj Finserv insurances",
+          "We can guarantee that you cannot find a better price on Bajaj Finserv products anywhere"
+          
+        ]
+      },
+      {
+        "tag": "Bajaj",
+        "patterns": [
+          "Why bajaj finserv?",
+          "What is so special about bajaj finserv",
+          "Why bajaj finserv products", "What is so unique about bajaj ?"
+        ],
+        "responses": [
+          "Bajaj Finserv offers the best in class products across all its companies",
+          "Bajaj Finserv leads the market in its respective segments"
+          
+        ]
+      }
+    ]
+  }
