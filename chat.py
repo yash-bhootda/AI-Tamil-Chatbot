@@ -7,6 +7,8 @@ import torch
 from model import NeuralNet
 from nltk_util import bag_of_words, tokenize
 
+from googletrans import Translator
+
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 with open('intents.json', 'r') as json_data:
@@ -26,10 +28,15 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Bbot"
+bot_name = "YAAS"
 
 def get_response(msg):
-    sentence = tokenize(msg)
+    
+    translator = Translator()
+    string = translator.translate(msg)
+    string=string.text
+    
+    sentence = tokenize(string)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
@@ -44,18 +51,26 @@ def get_response(msg):
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return random.choice(intent['responses'])
+                string = random.choice(intent['responses'])
+                resp_tamil=translator.translate(string , dest='ta')
+                return resp_tamil.text
+
     
-    return "I do not understand..."
+    return "எனக்கு புரியவில்லை ......."
 
 
 if __name__ == "__main__":
     print("Let's chat! (type 'quit' to exit)")
     while True:
         # sentence = "do you use credit cards?"
-        sentence = input("You: ")
+        sentence = input("You:")
+        from googletrans import Translator
+        translator = Translator()
+        result=translator.translate(sentence)
+        
         if sentence == "quit":
             break
 
-        resp = get_response(sentence)
-        print(resp)
+        resp = get_response(result.text)
+        resp_tamil=translator.translate(resp , dest='ta')
+        print(resp_tamil.text)
