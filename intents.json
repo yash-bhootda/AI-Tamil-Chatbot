@@ -35,24 +35,43 @@
         "tag": "working",
         "patterns": [
           "Which does this website offer?",
+          "Which does this chatbot offer?",
           "What is the purpose of this website?",
           "What do you sell?","What do you do"
         ],
         "responses": [
-          "We are a platform which helps track field agents for a particular and provide them the optimized travel route between customers using real time data. Demo link:https://www.youtube.com/watch?v=BBJa32lCaaY"
+          "We are a online food platform which offers chinese , indian , italian etc "
           
         ]
       }, 
       {
-        "tag": "company",
+        "tag": "order",
         "patterns": [
-          "What does the company do ?",
-          "How do i know this company?",
-          "What does this company offer ?"
+          "Write my order",
+          "I want to order",
+          "I want to order chinese",
+          "I want to order italian",
+          "I want to order indian"
           
         ],
         "responses": [
-          "We offer a Field Sales tracker to help optimize cost and travel route of field agents for Finance technical companies using real time data."
+          "Please let me know your order"
+          
+          
+        ]
+      },
+      {
+        "tag": "menu",
+        "patterns": [
+          "My order is biryani , paneer pasanda and naan",
+          "My order is noodles ",
+          "My order is pasta and garlic bread ",
+          "My order is chicken biryani?",
+          "My order is soup"
+          
+        ],
+        "responses": [
+          "Your order is confirmed"
           
           
         ]
@@ -60,12 +79,12 @@
       {
         "tag": "payments",
         "patterns": [
-          "What are the plans offered for the tracker?",
-          "What is the pricing?",
-          "What is the cost?"
+          "How do i pay?",
+          "What are the payment options?",
+          "Payment options?"
         ],
         "responses": [
-          "The Field Sales tracker has a costing of ₹5000 per month and it will significantly improve how well your field agents work."
+          "Pay the final amount to yrbhootda@okhdfcbank"
           
         ]
       }

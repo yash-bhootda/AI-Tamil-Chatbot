@@ -30,12 +30,13 @@ model.eval()
 
 bot_name = "YAAS"
 
+
 def get_response(msg):
-    
+
     translator = Translator()
     string = translator.translate(msg)
-    string=string.text
-    
+    string = string.text
+
     sentence = tokenize(string)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
@@ -51,8 +52,14 @@ def get_response(msg):
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
+
                 string = random.choice(intent['responses'])
+                if(tag == "menu"):
+                    file = open('yourmenu.txt', 'w')
+                    x = msg.split("My order is ")
+                    file.write(x[1])
                 resp_tamil=translator.translate(string , dest='ta')
+
                 return resp_tamil.text
 
     
